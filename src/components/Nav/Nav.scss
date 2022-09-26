@@ -1,0 +1,43 @@
+@import '../../design-tokens/variables.scss';
+@import '../../design-tokens/mixins.scss';
+
+.Nav {
+  border-bottom: 1px solid $lightGray;
+
+  ul {
+    display: flex;
+
+    li {
+      padding: 0.875rem 0.55rem;
+      transition: all 0.2s ease-in-out;
+      @include atSmall {
+        padding: 1.5rem 0.75rem;
+        margin-top: 0px;
+      }
+    }
+
+    li a {
+      text-decoration: none;
+      font-size: 0.875rem;
+      padding: 0.875rem 0.25rem;
+      color: inherit;
+      @include atSmall {
+        padding: 1.5rem 0.75rem;
+      }
+      @include atLarge {
+        font-size: 1rem;
+      }
+    }
+
+    li.active {
+      color: $darkBlue;
+      border-bottom: 1px solid $darkBlue;
+    }
+
+    li:hover,
+    li:active {
+      color: $darkBlue;
+      border-bottom: 1px solid $darkBlue;
+    }
+  }
+}

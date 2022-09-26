@@ -1,0 +1,10 @@
+@import '../../design-tokens/mixins.scss';
+.Header {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  @include atSmall {
+    flex-direction: row;
+  }
+}

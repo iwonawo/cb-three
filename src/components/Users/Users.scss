@@ -1,0 +1,53 @@
+@import '../../design-tokens/variables.scss';
+@import '../../design-tokens/mixins.scss';
+
+.Users {
+  width: 100%;
+  height: auto;
+  border: $border;
+  box-shadow: $boxshadow;
+  border-radius: 8px;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+    min-width: 800px;
+    background-color: #fff;
+  }
+  table thead tr th,
+  table tbody tr td {
+    font-family: inherit;
+    color: $mainBlack;
+    font-weight: 400;
+    text-align: left;
+    padding: 12px;
+    @include atSmall {
+      padding: 12px 24px;
+    }
+  }
+
+  table tbody {
+    border-bottom: $border;
+  }
+
+  .tablenav {
+    background-color: $lightBlue;
+    border-bottom: $border;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $darkGray;
+    margin: 1rem 1rem;
+    @include atSmall {
+      margin: 1rem 2rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+  }
+}

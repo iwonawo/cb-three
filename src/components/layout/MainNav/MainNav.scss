@@ -1,0 +1,111 @@
+@import '../../../design-tokens/mixins.scss';
+@import '../../../design-tokens/variables.scss';
+
+.MainNav {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid $lightGray;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 16px;
+  @include atLarge {
+    width: 15%;
+    border-bottom: none;
+    border-right: 1px solid $lightGray;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  .onmobile {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    @include atLarge {
+      display: none;
+    }
+  }
+  .ondesktop {
+    display: none;
+    @include atLarge {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  .main-nav-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    padding: 16px 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: $mainBlack;
+    width: 100%;
+    text-align: left;
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      background-color: $lightBlue;
+    }
+  }
+
+  button span {
+    margin-right: 6px;
+    display: inline-block;
+    transform: translateY(2px);
+  }
+
+  .count {
+    border-radius: 24px;
+    padding: 6px 10px;
+    font-size: 0.875rem;
+    background-color: $lightGray;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  button.active {
+    background-color: $lightBlue;
+    color: $darkBlue;
+  }
+
+  .user-info {
+    border: $border;
+    border-radius: 8px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    position: relative;
+    margin-top: 1rem;
+  }
+  .user-info .img {
+    overflow: hidden;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+  }
+  .user-info .data p:not(:last-child) {
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .user-info .icon {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    color: $darkGray;
+    cursor: pointer;
+  }
+}
