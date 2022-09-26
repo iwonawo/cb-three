@@ -1,0 +1,25 @@
+@import '../../design-tokens/variables.scss';
+@import '../../design-tokens/mixins.scss';
+
+.Search {
+  padding: 10px 12px;
+  box-shadow: $boxshadow;
+  border-radius: 8px;
+  border: 1px solid $lightGray;
+  color: $darkGray;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  @include atMedium {
+    width: 31%;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    margin-left: 8px;
+    font-size: 1rem;
+    width: 100%;
+  }
+}

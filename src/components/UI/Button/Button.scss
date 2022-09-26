@@ -1,0 +1,60 @@
+@import '../../../design-tokens/variables.scss';
+@import '../../../design-tokens/mixins.scss';
+
+.Button {
+  font: inherit;
+  font-size: 0.875rem;
+  box-shadow: $boxshadow;
+  padding: 10px 16px;
+  border: 1px solid $lightGray;
+  color: $mainBlack;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    background: $lightBlue;
+    border-color: $lightBlue;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--blue {
+    border: 1px solid $darkBlue;
+    background: $darkBlue;
+    color: white;
+    &:hover,
+    &:active {
+      background: rgba($darkBlue, 0.9);
+      border-color: rgba($darkBlue, 0.9);
+    }
+  }
+
+  &--full {
+    width: 100%;
+    @include atMedium {
+      width: auto;
+    }
+  }
+
+  span {
+    margin-right: 6px;
+    color: inherit;
+    transform: translateY(2px);
+    display: inline-block;
+  }
+}
+
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #666666;
+  cursor: not-allowed;
+}

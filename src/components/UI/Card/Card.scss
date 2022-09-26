@@ -1,0 +1,57 @@
+@import '../../../design-tokens/variables.scss';
+@import '../../../design-tokens/mixins.scss';
+
+.Card {
+  border: $border;
+  box-shadow: $boxshadow;
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+  height: 124px;
+  position: relative;
+  color: $darkGray;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+    @include atMedium {
+      margin-bottom: 0;
+    }
+  }
+  @include atMedium {
+    width: 31%;
+  }
+
+  & > * {
+    position: absolute;
+  }
+
+  .title {
+    left: 24px;
+    top: 24px;
+    font-weight: 500;
+  }
+  .total {
+    left: 24px;
+    bottom: 24px;
+    font-size: 36px;
+    font-weight: 400;
+    color: $mainBlack;
+  }
+  .more {
+    right: 24px;
+    top: 24px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .percent,
+  .users {
+    right: 24px;
+    bottom: 24px;
+    font-size: 0.875rem;
+  }
+
+  .percent {
+    background-color: $lightGreen;
+    color: $darkGreen;
+    padding: 0.2rem;
+  }
+}

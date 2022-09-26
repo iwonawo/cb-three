@@ -1,0 +1,13 @@
+@import '../../../design-tokens/variables.scss';
+@import '../../../design-tokens/mixins.scss';
+
+.Page {
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff;
+
+  @include atLarge {
+    width: 85%;
+    padding: 2rem;
+  }
+}
