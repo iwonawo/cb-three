@@ -1,14 +1,14 @@
 import React from 'react'
-import { FiMenu } from 'react-icons/fi'
 import {
-  ImHome,
-  ImStack,
-  ImFileText2,
-  ImBubbles4,
-  ImSvg,
-  ImArrowUpRight,
-  ImCogs
-} from 'react-icons/im'
+  FiMenu,
+  FiBell,
+  FiAirplay,
+  FiUsers,
+  FiEdit,
+  FiHome,
+  FiExternalLink
+} from 'react-icons/fi'
+import { ImStack, ImFileText2, ImBubbles4, ImCogs } from 'react-icons/im'
 
 import './MainNav.scss'
 
@@ -22,7 +22,7 @@ const MainNav = () => {
             <li>
               <button>
                 <span>
-                  <ImHome />
+                  <FiHome />
                 </span>
                 Home
               </button>
@@ -30,7 +30,7 @@ const MainNav = () => {
             <li>
               <button className="active">
                 <span>
-                  <ImSvg />
+                  <FiAirplay />
                 </span>
                 Dashboard
               </button>
@@ -46,7 +46,7 @@ const MainNav = () => {
             <li>
               <button>
                 <span>
-                  <ImSvg />
+                  <FiEdit />
                 </span>
                 Tasks <span className="count">10</span>
               </button>
@@ -62,7 +62,7 @@ const MainNav = () => {
             <li>
               <button>
                 <span>
-                  <ImSvg />
+                  <FiUsers />
                 </span>
                 Users
               </button>
@@ -73,7 +73,7 @@ const MainNav = () => {
               <li>
                 <button>
                   <span>
-                    <ImSvg />
+                    <FiBell />
                   </span>
                   Notifications
                 </button>
@@ -97,14 +97,17 @@ const MainNav = () => {
             </ul>
             <div className="user-info">
               <div className="img">
-                <img src="" alt="user" />
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  alt="user"
+                />
               </div>
               <div className="data">
                 <p>Frankie Sullivan</p>
                 <p>@frankie</p>
               </div>
               <div className="icon">
-                <ImArrowUpRight />
+                <FiExternalLink />
               </div>
             </div>
           </div>

@@ -93,9 +93,15 @@
   .user-info .img {
     overflow: hidden;
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    margin-right: 8px;
+    height: 36px;
+    width: 36px;
+    margin-right: 6px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   .user-info .data p:not(:last-child) {
     margin-bottom: 6px;
@@ -105,7 +111,7 @@
     top: 10px;
     right: 10px;
     position: absolute;
-    color: $darkGray;
+    color: rgba($darkGray, 0.5);
     cursor: pointer;
   }
 }
