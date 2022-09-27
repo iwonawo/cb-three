@@ -15,7 +15,7 @@ const Users = props => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoaded(true)
-    }, 1500)
+    }, 800)
     return () => clearTimeout()
   }, [])
 

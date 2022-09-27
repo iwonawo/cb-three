@@ -29,13 +29,13 @@
       }
     }
 
-    li.active {
+    li a.active {
       color: $darkBlue;
       border-bottom: 1px solid $darkBlue;
     }
 
-    li:hover,
-    li:active {
+    li a:hover,
+    li a:active {
       color: $darkBlue;
       border-bottom: 1px solid $darkBlue;
     }
