@@ -38,7 +38,8 @@ p {
   color: $darkGray;
 }
 
-h1 {
+h1,
+h2 {
   font-family: inherit;
   font-size: 1.5rem;
   line-height: 1.6rem;
@@ -48,6 +49,9 @@ h1 {
     font-size: 1.875rem;
     line-height: 2rem;
   }
+}
+h2 {
+  margin: 0.5rem auto;
 }
 
 // GLOBAL STYLES
@@ -70,6 +74,9 @@ h1 {
 .actions {
   text-align: center;
   display: flex;
+  &--end {
+    justify-content: flex-end;
+  }
 }
 
 .logo {
